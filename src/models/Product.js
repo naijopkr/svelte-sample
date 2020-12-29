@@ -7,7 +7,8 @@ const sequelize = new Sequelize(
 export const Product = sequelize.define('Product', {
     ean: DataTypes.STRING,
     name: DataTypes.STRING,
-    description: DataTypes.STRING
+    description: DataTypes.STRING,
+    price: DataTypes.FLOAT
 }, {
     tableName: 'products'
 })

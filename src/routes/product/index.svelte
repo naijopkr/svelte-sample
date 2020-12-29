@@ -1,6 +1,8 @@
 <script context="module">
     export function preload() {
-        return this.fetch('product.json').then(r => r.json()).then(products => {
+        return this.fetch('product.json').then(r => {
+            return r.json()
+        }).then(products => {
             return { products }
         })
     }
