@@ -1,0 +1,10 @@
+services:
+  svelte-sample:
+    build: .
+    command: sh -c "npm install && npm run dev"
+    environment:
+      - NODE_ENV=development
+      - DATABASE_URL=postgres://postgres:postgres@192.168.0.10:5432/sampledb
+    ports:
+      - '3000:3000'
+    working_dir: /root/svelte-sample
