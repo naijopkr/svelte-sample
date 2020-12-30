@@ -1,7 +1,7 @@
-import { listProducts } from '../../../controllers/ProductController'
+import { listBatches } from '../../../controllers/BatchController'
 
 export function get(req, res, next) {
-    listProducts().then(data => {
+    listBatches().then(data => {
         res.setHeader('Content-Type', 'application/json')
         res.end(data)
     }).catch(error => console.log(error))
