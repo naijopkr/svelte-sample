@@ -7,6 +7,10 @@ export const Product = sequelize.define('Product', {
     ean: DataTypes.STRING,
     name: DataTypes.STRING,
     description: DataTypes.STRING,
+    inStock: {
+        type: DataTypes.INTEGER,
+        field: 'in_stock'
+    },
     price: DataTypes.FLOAT
 }, {
     tableName: 'products',
