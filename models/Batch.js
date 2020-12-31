@@ -1,9 +1,9 @@
-import { Sequelize, DataTypes } from 'sequelize'
-import { databaseURL } from '../config/dotenv'
+const { Sequelize, DataTypes } = require('sequelize')
+const { databaseURL } = require('../config/dotenv')
 
 const sequelize = new Sequelize(databaseURL)
 
-export const Batch = sequelize.define('Batch', {
+const Batch = sequelize.define('Batch', {
     code: DataTypes.STRING,
     productEAN: {
         type: DataTypes.STRING,
@@ -19,3 +19,7 @@ export const Batch = sequelize.define('Batch', {
     createdAt: 'created_at',
     updatedAt: 'updated_at',
 })
+
+module.exports = {
+    Batch
+}

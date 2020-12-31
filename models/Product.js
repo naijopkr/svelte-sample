@@ -1,9 +1,9 @@
-import { Sequelize, DataTypes } from 'sequelize'
-import { databaseURL } from '../config/dotenv'
+const { Sequelize, DataTypes } = require('sequelize')
+const { databaseURL } = require('../config/dotenv')
 
 const sequelize = new Sequelize(databaseURL)
 
-export const Product = sequelize.define('Product', {
+const Product = sequelize.define('Product', {
     ean: DataTypes.STRING,
     name: DataTypes.STRING,
     description: DataTypes.STRING,
@@ -17,3 +17,7 @@ export const Product = sequelize.define('Product', {
     createdAt: 'created_at',
     updatedAt: 'updated_at'
 })
+
+module.exports = {
+    Product
+}

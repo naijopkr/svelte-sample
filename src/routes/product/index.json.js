@@ -1,4 +1,4 @@
-import { listProducts } from '../../../controllers/ProductController'
+import { listProducts, createProduct } from '../../../controllers/ProductController'
 
 export function get(req, res, next) {
     listProducts().then(data => {

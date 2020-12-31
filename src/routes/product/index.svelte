@@ -23,3 +23,11 @@
     <li><a rel="prefetch" href="product/{product.ean}">{product.name}</a></li>
     {/each}
 </ul>
+
+<form action='/product' method='POST'>
+    <input name='ean' />
+    <input name='name' />
+    <input name='description' />
+    <input name='price' />
+    <button type='submit' />
+</form>
