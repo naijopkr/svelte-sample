@@ -36,7 +36,7 @@
 		content: '';
 		width: calc(100% - 1em);
 		height: 2px;
-		background-color: rgb(255,62,0);
+		background-color: rgb(85, 211, 106);
 		display: block;
 		bottom: -1px;
 	}
@@ -54,7 +54,6 @@
 
 		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
 		     the blog data when we hover over the link or tap it on a touchscreen -->
-		<li><a rel=prefetch aria-current="{segment === 'product' ? 'page' : undefined}" href="product">products</a></li>
-		<li><a rel=prefetch aria-current="{segment === 'batch' ? 'page' : undefined}" href="batch">batches</a></li>
+		<li><a rel=prefetch aria-current="{segment === 'tvshows' ? 'page' : undefined}" href="tvshows">tv shows</a></li>
 	</ul>
 </nav>

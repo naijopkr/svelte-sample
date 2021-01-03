@@ -1,13 +1,27 @@
 BEGIN;
 
-    INSERT INTO products (ean, "name", "description", price) VALUES
-        ('1234568732', 'PRODUCT #1', 'The fisrt product created', 99.99);
+    INSERT INTO tv_shows (id, "name", "description", release_year) VALUES
+        (1, 'Friends', 'The day a day of a group of 6 friends.', '1994'),
+        (2, 'Modern Family', 'The day a day of 3 families', '2008');
 
-    INSERT INTO "batches" (code, product_ean, qty, delivery_date) VALUES
-        ('BA-23420-1', '1234568732', 10, '2020-12-26');
-
-    UPDATE products
-        SET in_stock = (SELECT in_stock FROM products WHERE ean = '1234568732') + 10
-        WHERE ean = '1234568732';
+    INSERT INTO "characters" ("name", tv_show_id) VALUES
+        ('Chandler Bing', 1),
+        ('Monica Geller', 1),
+        ('Ross Geller', 1),
+        ('Phoebe Buffay', 1),
+        ('Joey Tribiani', 1),
+        ('Rachel Green', 1),
+        ('Phil Dunphy', 2),
+        ('Claire Dunphy', 2),
+        ('Haley Dunphy', 2),
+        ('Alex Dunphy', 2),
+        ('Luke Dunphy', 2),
+        ('Mitchel Prichet', 2),
+        ('Cameron Tucker', 2),
+        ('Lily Pritchet-Tucker', 2),
+        ('Jay Prichet', 2),
+        ('Gloria Prichet', 2),
+        ('Mani Delgado', 2),
+        ('Joe Prichet', 2);
 
 END;

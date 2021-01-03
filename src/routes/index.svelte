@@ -1,9 +1,5 @@
-<script>
-	import successkid from 'images/successkid.jpg';
-</script>
-
 <style>
-	h1, figure, p {
+	h1, p {
 		text-align: center;
 		margin: 0 auto;
 	}
@@ -13,16 +9,6 @@
 		text-transform: uppercase;
 		font-weight: 700;
 		margin: 0 0 0.5em 0;
-	}
-
-	figure {
-		margin: 0 0 1em 0;
-	}
-
-	img {
-		width: 100%;
-		max-width: 400px;
-		margin: 0 0 1em 0;
 	}
 
 	p {
@@ -37,14 +23,11 @@
 </style>
 
 <svelte:head>
-	<title>Sapper project template</title>
+	<title>Sapper/svelte sample</title>
 </svelte:head>
 
-<h1>Great success!</h1>
+<h1>Sample of svelte and sapper project</h1>
 
-<figure>
-	<img alt="Success Kid" src="{successkid}">
-	<figcaption>Have fun with Sapper!</figcaption>
-</figure>
+<p><strong>Check out some cool tv shows and their main characters.</strong></p>
 
-<p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>
+<p>You can also use our API to create more shows and more characters.</p>

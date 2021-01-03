@@ -1,10 +1,21 @@
 services:
+  backend-api:
+    build: .
+    command: npm run api
+    environment:
+      - NODE_ENV=development
+      - DATABASE_URL=postgres://postgres:postgres@192.168.1.157:5432/sampledb
+    ports:
+      - '5000:5000'
+    depends_on:
+      - svelte-sample
+    working_dir: /root/svelte-sample
   svelte-sample:
     build: .
     command: sh -c "npm install && npm run dev"
     environment:
       - NODE_ENV=development
-      - DATABASE_URL=postgres://postgres:postgres@192.168.0.10:5432/sampledb
+      - DATABASE_URL=postgres://postgres:postgres@192.168.1.157:5432/sampledb
     ports:
       - '3000:3000'
     working_dir: /root/svelte-sample

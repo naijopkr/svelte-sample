@@ -3,21 +3,18 @@ const { databaseURL } = require('../config/dotenv')
 
 const sequelize = new Sequelize(databaseURL)
 
-const Product = sequelize.define('Product', {
-    ean: DataTypes.STRING,
+const Character = sequelize.define('Character', {
     name: DataTypes.STRING,
-    description: DataTypes.STRING,
-    inStock: {
+    tvShowId: {
         type: DataTypes.INTEGER,
-        field: 'in_stock'
-    },
-    price: DataTypes.FLOAT
+        field: 'tv_show_id'
+    }
 }, {
-    tableName: 'products',
+    tableName: 'characters',
     createdAt: 'created_at',
     updatedAt: 'updated_at'
 })
 
 module.exports = {
-    Product
+    Character
 }
