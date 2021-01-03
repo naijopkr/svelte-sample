@@ -27,7 +27,6 @@
     .year {
         font-size: 10px;
         font-weight: normal;
-        text-decoration: underline;
     }
 </style>
 

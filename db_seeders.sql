@@ -16,12 +16,12 @@ BEGIN;
         ('Haley Dunphy', 2),
         ('Alex Dunphy', 2),
         ('Luke Dunphy', 2),
-        ('Mitchel Prichet', 2),
+        ('Mitchel Pritchett', 2),
         ('Cameron Tucker', 2),
-        ('Lily Pritchet-Tucker', 2),
-        ('Jay Prichet', 2),
-        ('Gloria Prichet', 2),
+        ('Lily Pritchett-Tucker', 2),
+        ('Jay Pritchett', 2),
+        ('Gloria Pritchett', 2),
         ('Mani Delgado', 2),
-        ('Joe Prichet', 2);
+        ('Joe Pritchett', 2);
 
 END;

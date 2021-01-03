@@ -7,7 +7,7 @@ const sequelize = new Sequelize(databaseURL)
 const TvShow = sequelize.define('TvShow', {
     name: DataTypes.STRING,
     description: DataTypes.STRING,
-    realeaseYear: {
+    releaseYear: {
         type: DataTypes.STRING,
         field: 'release_year'
     },
