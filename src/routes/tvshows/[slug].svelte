@@ -1,4 +1,6 @@
 <script context="module">
+    import CharacterCard from '../../components/CharacterCard.svelte'
+
     export function preload({ params }) {
         return this.fetch(`tvshows/${params.slug}.json`).then(r => {
             return r.json()
@@ -18,8 +20,6 @@
 
 <h1>Tv Shows</h1>
 
-<ul>
-    {#each characters as character}
-    <li>{character.name}</li>
-    {/each}
-</ul>
+{#each characters as character}
+<CharacterCard name={character.name} />
+{/each}

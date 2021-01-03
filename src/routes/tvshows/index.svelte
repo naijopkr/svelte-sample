@@ -1,4 +1,6 @@
 <script context="module">
+    import TvShowCard from '../../components/TvShowCard.svelte'
+
     export function preload() {
         return this.fetch('tvshows.json').then(r => {
             return r.json()
@@ -18,8 +20,6 @@
 
 <h1>Tv Shows</h1>
 
-<ul>
-    {#each tvshows as tvshow}
-    <li><a rel="prefetch" href="tvshows/{tvshow.id}">{tvshow.name}</a></li>
-    {/each}
-</ul>
+{#each tvshows as tvshow}
+<a rel="prefetch" href="tvshows/{tvshow.id}"><TvShowCard name={tvshow.name} description={tvshow.description} releaseYear={tvshow.releaseYear} /></a>
+{/each}
