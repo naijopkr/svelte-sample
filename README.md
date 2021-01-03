@@ -10,8 +10,15 @@
 
 ## Configuring the database
 
-You can use the any Sql database supported by `sequelize`, but the sql files are made for postgres,
-so it may need some adaptations.
+You can use the any Sql database supported by `sequelize`, but the sql files are made for postgres so as the libraries `pg` and `pg-hstore`,
+so it may need some adaptations and to install the proper library:
+
+```
+$ npm install --save mysql2
+$ npm install --save mariadb
+$ npm install --save sqlite3
+$ npm install --save tedious # Microsoft SQL Server
+```
 
 After creating the database for the application, run the scripts on `initial_migrations.sql` to create the tables needed on the application. Then, run the scripts on `db_seeders.sql` to provide initial data for the application.
 
